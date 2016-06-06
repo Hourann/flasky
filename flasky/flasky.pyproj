@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>803418b3-0303-4e92-9980-4a020a234f38</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>flasky\hello.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <StaticUriPattern>^/static/.*</StaticUriPattern>
+    <StaticUriRewrite>^/$(MSBuildProjectName)/static/.*</StaticUriRewrite>
+    <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
+    <Name>flasky</Name>
+    <RootNamespace>flasky</RootNamespace>
+    <InterpreterId>{e92fd4a8-5244-4ac5-8744-c1b69f4ffba7}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <CommandLineArguments>runserver -h 0.0.0.0</CommandLineArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="flasky\app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="flasky\hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="flasky\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="runserver.py" />
+    <Compile Include="flasky\__init__.py" />
+    <Compile Include="flasky\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="flasky\" />
+    <Folder Include="flasky\app\" />
+    <Folder Include="flasky\app\static\" />
+    <Folder Include="flasky\app\static\content\" />
+    <Folder Include="flasky\app\static\fonts\" />
+    <Folder Include="flasky\app\static\scripts\" />
+    <Folder Include="flasky\app\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="flasky\app\static\favicon.ico" />
+    <Content Include="flasky\app\templates\404.html" />
+    <Content Include="flasky\app\templates\500.html" />
+    <Content Include="flasky\app\templates\base.html" />
+    <Content Include="flasky\app\templates\user.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="flasky\app\static\content\bootstrap.css" />
+    <Content Include="flasky\app\static\content\bootstrap.min.css" />
+    <Content Include="flasky\app\static\content\site.css" />
+    <Content Include="flasky\app\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="flasky\app\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="flasky\app\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="flasky\app\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="flasky\app\static\scripts\bootstrap.js" />
+    <Content Include="flasky\app\static\scripts\bootstrap.min.js" />
+    <Content Include="flasky\app\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="flasky\app\static\scripts\jquery-1.10.2.js" />
+    <Content Include="flasky\app\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="flasky\app\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="flasky\app\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="flasky\app\static\scripts\jquery.validate.js" />
+    <Content Include="flasky\app\static\scripts\jquery.validate.min.js" />
+    <Content Include="flasky\app\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="flasky\app\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="flasky\app\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="flasky\app\static\scripts\respond.js" />
+    <Content Include="flasky\app\static\scripts\respond.min.js" />
+    <Content Include="flasky\app\static\scripts\_references.js" />
+    <Content Include="flasky\app\templates\about.html" />
+    <Content Include="flasky\app\templates\contact.html" />
+    <Content Include="flasky\app\templates\index.html" />
+    <Content Include="flasky\app\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="venv\">
+      <Id>{e92fd4a8-5244-4ac5-8744-c1b69f4ffba7}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
+      <Version>3.5</Version>
+      <Description>venv (Python 64-bit 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
